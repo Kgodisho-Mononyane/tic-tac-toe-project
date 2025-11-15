@@ -8,8 +8,8 @@
     --black: black;
     --background-gray: gray;
     --background-blue: blue;
-    --background-blue-hover: blue;
-    --background-blue-active: blue;
+    --background-blue-hover: rgb(47, 47, 212);
+    --background-blue-active: rgb(83, 83, 168);
 
     --display-height: 15vh;
 }
@@ -28,4 +28,24 @@ main {
     width: 100vw;
     height: calc(100vh - var(--display-height));
     background-color: var(--background-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#start-btn {
+    height: 3em;
+    width: 5rem;
+    border: none;
+    border-radius: .5em;
+    background-color: var(--background-blue);
+    color: var(--white)
+}
+
+#start-btn:hover {
+    background-color: var(--background-blue-hover);
+}
+
+#start-btn:active {
+    background-color: var(--background-blue-active);
 }
