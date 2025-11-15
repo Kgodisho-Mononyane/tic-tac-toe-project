@@ -49,3 +49,15 @@ main {
 #start-btn:active {
     background-color: var(--background-blue-active);
 }
+
+
+/* DIALOG BOX */
+#dialog {
+    height: 25rem;
+    width: 18.5rem;
+    top: 20%;
+    left: 40%;
+    border: none;
+    border-radius: 0.3em;
+    background-color: var(--background-gray);
+}
