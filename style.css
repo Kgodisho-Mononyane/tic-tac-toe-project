@@ -6,10 +6,10 @@
 
     --white: white;
     --black: black;
-    --background-gray: gray;
-    --background-blue: blue;
-    --background-blue-hover: rgb(47, 47, 212);
-    --background-blue-active: rgb(83, 83, 168);
+    --background-blue: #1F2937;
+    --background-blue-hover: #3f4f66;
+    --background-blue-active: #647894;
+    --background-gray: #dfdde0;
 
     --display-height: 15vh;
 }
@@ -21,7 +21,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--white)
+    color: var(--white);
 }
 /* MAIN */
 main {
@@ -60,4 +60,10 @@ main {
     border: none;
     border-radius: 0.3em;
     background-color: var(--background-gray);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
