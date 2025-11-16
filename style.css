@@ -12,6 +12,7 @@
     --background-gray: #dfdde0;
 
     --display-height: 15vh;
+    --spacing: 1.5em;
 }
 /* HEADER */
 header {
@@ -30,7 +31,8 @@ main {
     background-color: var(--background-gray);
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    padding-top: var(--spacing);
 }
 
 #start-btn {
@@ -53,7 +55,7 @@ main {
 
 /* DIALOG BOX */
 #dialog {
-    height: 20rem;
+    height: 18rem;
     width: 16rem;
     top: 20%;
     left: 40%;
@@ -80,6 +82,14 @@ main {
     border-radius: 0.4em;
     font-size: 1em;
     border: none;
+}
+
+.dialog-input::placeholder {
+    color: var(--background-blue-hover);
+}
+
+input:focus {
+    outline: none; 
 }
 
 #submitBtn {
