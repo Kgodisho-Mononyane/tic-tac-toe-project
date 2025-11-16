@@ -23,7 +23,13 @@ header {
     flex-direction: column;
     align-items: center;
     color: var(--white);
+    justify-content: center
 }
+
+#heading {
+    font-size: 3em;
+}
+
 /* MAIN */
 main {
     width: 100vw;
