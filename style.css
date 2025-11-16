@@ -53,8 +53,8 @@ main {
 
 /* DIALOG BOX */
 #dialog {
-    height: 25rem;
-    width: 18.5rem;
+    height: 20rem;
+    width: 16rem;
     top: 20%;
     left: 40%;
     border: none;
@@ -80,4 +80,17 @@ main {
     border-radius: 0.4em;
     font-size: 1em;
     border: none;
+}
+
+#submitBtn {
+    background-color: var(--background-blue);
+    color: var(--white)
+}
+
+#submitBtn:hover{
+    background-color: var(--background-blue-hover);
+}
+
+#submitBtn:active {
+    background-color: var(--background-blue-active);
 }
