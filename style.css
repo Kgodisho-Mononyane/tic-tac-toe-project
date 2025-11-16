@@ -72,3 +72,12 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+.dialog-input {
+    height: 3em;
+    width: 90%;
+    margin: 1em 1em 1em 1em;
+    border-radius: 0.4em;
+    font-size: 1em;
+    border: none;
+}
