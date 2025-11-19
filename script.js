@@ -19,7 +19,3 @@
 
     return {playerX, playerO};
 })();
-
-const test = (function() {
-    console.log(playerX.value, playerO.value);
-})();

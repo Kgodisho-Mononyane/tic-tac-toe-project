@@ -110,3 +110,14 @@ input:focus {
 #submitBtn:active {
     background-color: var(--background-blue-active);
 }
+
+/* CONTAINER */
+container {
+    display: flex;
+    flex-direction: column;
+}
+
+#player-container {
+    display: flex;
+    gap: 2rem;
+}
