@@ -41,7 +41,7 @@ main {
     padding-top: var(--spacing);
 }
 
-#start-btn {
+.btn {
     height: 3em;
     width: 5rem;
     border: none;
