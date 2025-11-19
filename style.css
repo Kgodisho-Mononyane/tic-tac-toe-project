@@ -11,7 +11,7 @@
     --background-blue-active: #647894;
     --background-gray: #dfdde0;
 
-    --display-height: 15vh;
+    --display-height: 12vh;
     --spacing: 1.5em;
 }
 /* HEADER */
@@ -48,6 +48,10 @@ main {
     border-radius: .5em;
     background-color: var(--background-blue);
     color: var(--white)
+}
+
+#start-btn {
+    margin-bottom: var(--spacing);
 }
 
 #start-btn:hover {
@@ -115,6 +119,7 @@ input:focus {
 #container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     /* margin-top: var(--spacing) */
 }
 
