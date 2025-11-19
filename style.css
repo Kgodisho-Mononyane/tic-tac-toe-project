@@ -118,6 +118,12 @@ input:focus {
     /* margin-top: var(--spacing) */
 }
 
+#gameboard-container {
+    border: 1px solid red;
+    height: 300px;
+    width: 300px;
+}
+
 #player-container {
     display: flex;
     gap: 2rem;
