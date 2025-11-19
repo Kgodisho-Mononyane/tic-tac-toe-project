@@ -112,12 +112,19 @@ input:focus {
 }
 
 /* CONTAINER */
-container {
+#container {
     display: flex;
     flex-direction: column;
+    /* margin-top: var(--spacing) */
 }
 
 #player-container {
     display: flex;
     gap: 2rem;
+}
+
+.player-value-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
