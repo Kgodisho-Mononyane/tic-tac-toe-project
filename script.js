@@ -25,3 +25,19 @@
 
     return {playerX, playerO};
 })();
+
+
+const reset = (function() {
+    const resetBtn = document.querySelector("#resetBtn");
+
+    resetBtn.addEventListener("click", () => {
+        console.log("reset button clicked")
+        //clear player names variables
+        //clear player names on dom
+        //clear player scores variables
+        //clear player scores on dom
+        //clear board variable
+        //clear board on dom
+        //set header back to original state
+    })
+})();
