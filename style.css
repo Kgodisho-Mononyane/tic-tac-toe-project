@@ -124,7 +124,7 @@ input:focus {
 }
 
 #gameboard-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 300px;
     width: 300px;
     display: grid;
@@ -132,9 +132,17 @@ input:focus {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.boardDiv {
-    border: 1px solid black;
+#div4,#div5,#div6,#div7,#div8,#div9{
+    border-top: 2px solid black;
 }
+
+
+
+#div2,#div3,#div5,#div6,#div8,#div9{
+    border-left: 2px solid black;
+}
+
+
 
 #player-container {
     display: flex;
