@@ -136,6 +136,7 @@ input:focus {
 
 #gameboard-container {
     /* border: 1px solid red; */
+    margin-top: var(--spacing);
     height: 300px;
     width: 300px;
     display: grid;
@@ -151,3 +152,6 @@ input:focus {
     border-left: 0.4rem solid var(--background-blue);
 }
 
+#buttons-container {
+    margin-top: var(--spacing);
+}
