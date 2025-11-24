@@ -10,6 +10,8 @@
     --background-blue-hover: #3f4f66;
     --background-blue-active: #647894;
     --background-gray: #dfdde0;
+    --player-x-color: #06B6D4;
+    --player-o-color: #F97316;
 
     --display-height: 12vh;
     --spacing: 1.5em;
@@ -125,7 +127,7 @@ input:focus {
 
 #player-container {
     display: flex;
-    gap: 2rem;
+    gap: 10rem;
 }
 
 .player-value-container {
@@ -142,7 +144,15 @@ input:focus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-} 
+}
+
+.boardDiv.xDiv {
+    background-color: var(--player-x-color);
+}
+
+.boardDiv.oDiv {
+    background-color: var(--player-o-color);
+}
 
 #div4,#div5,#div6,#div7,#div8,#div9{
     border-top: 0.4rem solid var(--background-blue);
