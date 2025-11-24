@@ -133,16 +133,14 @@ input:focus {
 }
 
 #div4,#div5,#div6,#div7,#div8,#div9{
-    border-top: 2px solid black;
+    border-top: 0.4rem solid var(--background-blue);
 }
 
 
 
 #div2,#div3,#div5,#div6,#div8,#div9{
-    border-left: 2px solid black;
+    border-left: 0.4rem solid var(--background-blue);
 }
-
-
 
 #player-container {
     display: flex;
