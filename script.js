@@ -26,6 +26,10 @@
     return {playerX, playerO};
 })();
 
+const playGame = (function() {
+    const playerXScore = 0;
+    const playerOScore = 0;
+})
 
 const reset = (function() {
     const resetBtn = document.querySelector("#resetBtn");

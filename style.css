@@ -127,6 +127,13 @@ input:focus {
     border: 1px solid red;
     height: 300px;
     width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.boardDiv {
+    border: 1px solid black;
 }
 
 #player-container {
