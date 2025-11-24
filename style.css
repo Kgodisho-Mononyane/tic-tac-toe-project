@@ -154,4 +154,6 @@ input:focus {
 
 #buttons-container {
     margin-top: var(--spacing);
+    display: flex;
+    gap: 2rem;
 }
