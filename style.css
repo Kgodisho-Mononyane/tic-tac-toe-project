@@ -61,7 +61,7 @@ main {
 }
 
 #start-btn {
-    margin-bottom: var(--spacing);
+    margin-bottom: 0.5rem;
 }
 
 /* DIALOG BOX */
