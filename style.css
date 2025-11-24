@@ -52,18 +52,17 @@ main {
     color: var(--white)
 }
 
-#start-btn {
-    margin-bottom: var(--spacing);
-}
-
-#start-btn:hover {
+.btn:hover {
     background-color: var(--background-blue-hover);
 }
 
-#start-btn:active {
+.btn:active {
     background-color: var(--background-blue-active);
 }
 
+#start-btn {
+    margin-bottom: var(--spacing);
+}
 
 /* DIALOG BOX */
 #dialog {
