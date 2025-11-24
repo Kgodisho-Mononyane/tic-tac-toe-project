@@ -138,8 +138,8 @@ input:focus {
 #gameboard-container {
     /* border: 1px solid red; */
     margin-top: var(--spacing);
-    height: 300px;
-    width: 300px;
+    height: 20rem;
+    width: 20rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
