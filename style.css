@@ -123,25 +123,6 @@ input:focus {
     /* margin-top: var(--spacing) */
 }
 
-#gameboard-container {
-    /* border: 1px solid red; */
-    height: 300px;
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-
-#div4,#div5,#div6,#div7,#div8,#div9{
-    border-top: 0.4rem solid var(--background-blue);
-}
-
-
-
-#div2,#div3,#div5,#div6,#div8,#div9{
-    border-left: 0.4rem solid var(--background-blue);
-}
-
 #player-container {
     display: flex;
     gap: 2rem;
@@ -152,3 +133,21 @@ input:focus {
     flex-direction: column;
     align-items: center;
 }
+
+#gameboard-container {
+    /* border: 1px solid red; */
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+} 
+
+#div4,#div5,#div6,#div7,#div8,#div9{
+    border-top: 0.4rem solid var(--background-blue);
+}
+
+#div2,#div3,#div5,#div6,#div8,#div9{
+    border-left: 0.4rem solid var(--background-blue);
+}
+
