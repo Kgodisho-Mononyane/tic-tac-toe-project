@@ -1,3 +1,42 @@
+const gameBoard = (function() {
+    let board = ["","","","","","","","",""];
+
+    const getBoard = () => board;
+
+    return {getBoard}
+})();
+
+const players = (function() {
+    const playerXScore = 0;
+    const playerOScore = 0;
+
+    return {playerXScore, playerOScore};
+})();
+
+const playGame = (function() {
+
+    return {}
+})();
+
+const displayGame = (function() {
+    const resetBtn = document.querySelector("#resetBtn");
+
+
+
+    resetBtn.addEventListener("click", () => {
+        console.log("reset button clicked")
+        //clear player names variables
+        //clear player names on dom
+        //clear player scores variables
+        //clear player scores on dom
+        //clear board variable
+        //clear board on dom
+        //set header back to original state
+    });
+})();
+
+
+/*
 (function() {
     const startBtn = document.querySelector("#start-btn");
     const dialog = document.querySelector("#dialog");
@@ -25,23 +64,6 @@
 
     return {playerX, playerO};
 })();
+*/
 
-const playGame = (function() {
-    const playerXScore = 0;
-    const playerOScore = 0;
-})
 
-const reset = (function() {
-    const resetBtn = document.querySelector("#resetBtn");
-
-    resetBtn.addEventListener("click", () => {
-        console.log("reset button clicked")
-        //clear player names variables
-        //clear player names on dom
-        //clear player scores variables
-        //clear player scores on dom
-        //clear board variable
-        //clear board on dom
-        //set header back to original state
-    })
-})();
