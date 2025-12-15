@@ -19,9 +19,14 @@ const playGame = (function() {
 })();
 
 const displayGame = (function() {
+    const playAgainBtn = document.querySelector("#playAgainBtn");
     const resetBtn = document.querySelector("#resetBtn");
 
-
+    playAgainBtn.addEventListener("click", () => {
+        console.log("play again button clicked");
+        //clear board variable
+        //clear board on dom
+    })
 
     resetBtn.addEventListener("click", () => {
         console.log("reset button clicked")
