@@ -19,8 +19,14 @@ const playGame = (function() {
 })();
 
 const displayGame = (function() {
+    const startBtn = document.querySelector("#start-btn");
     const playAgainBtn = document.querySelector("#playAgainBtn");
     const resetBtn = document.querySelector("#resetBtn");
+
+    startBtn.addEventListener("click", () => {
+        dialog.showModal();
+        form.reset();
+    })
 
     playAgainBtn.addEventListener("click", () => {
         console.log("play again button clicked");
@@ -43,7 +49,7 @@ const displayGame = (function() {
 
 /*
 (function() {
-    const startBtn = document.querySelector("#start-btn");
+    
     const dialog = document.querySelector("#dialog");
     const submitBtn = document.querySelector("#submitBtn");
     const form = document.querySelector("#form");
@@ -51,10 +57,7 @@ const displayGame = (function() {
     const playerO = document.querySelector("#playerO");
     
     
-    startBtn.addEventListener("click", () => {
-        dialog.showModal();
-        form.reset();
-    })
+    
 
     submitBtn.addEventListener("click", (e) => {
         const playerXName = document.querySelector("#playerXName");
