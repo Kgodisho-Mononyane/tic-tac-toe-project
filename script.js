@@ -1,4 +1,14 @@
 const gameBoard = (function() {
+    // const rows = 3;
+    // const columns = 3;
+
+    // for (let i = 0; i < rows; i++) {
+    //     board[i] = [];
+    //     for (let j = 0; j < columns; j++) {
+    //         board[i].push()
+    //     }
+    // }
+    
     let board = ["","","","","","","","",""];
 
     const getBoard = () => board;
@@ -57,8 +67,6 @@ const displayGame = (function() {
     const playerO = document.querySelector("#playerO");
     
     
-    
-
     submitBtn.addEventListener("click", (e) => {
         const playerXName = document.querySelector("#playerXName");
         const playerOName = document.querySelector("#playerOName");
