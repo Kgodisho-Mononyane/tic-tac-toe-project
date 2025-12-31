@@ -15,6 +15,22 @@ const gameBoard = (function() {
     return {getBoard}
 })();
 
+function Cell() {
+    let value = 0;
+
+    const addToken = (player) => {
+        value = player;
+    };
+
+    const getValue = () => value;
+
+    return {
+        addToken,
+        getValue
+    }
+}
+
+
 const players = (function() {
     const playerXScore = 0;
     const playerOScore = 0;
