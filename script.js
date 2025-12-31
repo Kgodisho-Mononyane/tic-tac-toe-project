@@ -30,11 +30,8 @@ function Cell() {
     }
 }
 
-const gameController = (function(
-    playerOneName = "Player One",
-    playerTwoName = "Player Two"
-) {
-    const board = gameBoard();
+const gameController = (function() {
+    //const board = gameBoard();
     const playerOneName = document.querySelector("#playerX").value;
     const playerTwoName = document.querySelector("#playerO").value;
 
@@ -56,8 +53,11 @@ const screenController = (function() {
     const startBtn = document.querySelector("#start-btn");
     const playAgainBtn = document.querySelector("#playAgainBtn");
     const resetBtn = document.querySelector("#resetBtn");
+    const dialog = document.querySelector("#dialog");
+    const form = document.querySelector("#form");
 
     startBtn.addEventListener("click", () => {
+        console.log("start button clicked")
         dialog.showModal();
         form.reset();
     })
