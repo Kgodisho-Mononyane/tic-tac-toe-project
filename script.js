@@ -6,9 +6,9 @@ const gameBoard = (function() {
     for (let i = 0; i < rows; i++) {
         board[i] = [];
         for (let j = 0; j < columns; j++) {
-            board[i].push(Cell())
-        }
-    }
+            board[i].push(Cell());
+        };
+    };
 
     const getBoard = () => board;
 
@@ -30,8 +30,13 @@ function Cell() {
     }
 }
 
-const gameController = (function() {
+const gameController = (function(
+    playerOneName = "Player One",
+    playerTwoName = "Player Two"
+) {
     const board = gameBoard();
+    const playerOneName = document.querySelector("#playerX").value;
+    const playerTwoName = document.querySelector("#playerO").value;
 
     const players = [
         {
