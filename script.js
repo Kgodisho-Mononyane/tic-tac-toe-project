@@ -1,4 +1,4 @@
-const gameBoard = (function() {
+function gameBoard() {
     const rows = 3;
     const columns = 3;
     const board = [];
@@ -6,18 +6,28 @@ const gameBoard = (function() {
     for (let i = 0; i < rows; i++) {
         board[i] = [];
         for (let j = 0; j < columns; j++) {
-            board[i].push(Cell());
+            board[i].push(cell());
         };
     };
 
     const getBoard = () => board;
 
-    return {getBoard}
-})();
+    function addToken() {
+        // add player tokens to the board
+    }
 
-console.log(gameBoard.getBoard())
+    function printBoard() {
 
-function Cell() {
+    }
+
+    return {
+        getBoard,
+        addToken,
+        printBoard
+    }
+};
+
+function cell() {
     let value = 0;
 
     const addToken = (player) => {
@@ -32,26 +42,39 @@ function Cell() {
     }
 }
 
-const gameController = (function() {
+function gameController() {
     //const board = gameBoard();
-    //const playerOneName = document.querySelector("#playerX").value;
-    //const playerTwoName = document.querySelector("#playerO").value;
+    const playerOneName = document.querySelector("#playerX").value;
+    const playerTwoName = document.querySelector("#playerO").value;
+    
+    const playerXName = document.querySelector("#playerXName");
+    const playerOName = document.querySelector("#playerOName");
+
 
     const players = [
         {
-            name: "playerOneName", //Define PlayerOneName
+            name: playerOneName, //Define PlayerOneName
             token: "X",
             score: 0
         },
         {
-            name: "playerTwoName", //Define PlayerTwoName
+            name: playerTwoName, //Define PlayerTwoName
             token: "O",
             score: 0
         }
-    ]
-})();
+    ];
+
+    let activePlayer = players[0];
+
+    const switchPlayerTurn = () => {
+        activePlayer = activePlayer === players[0] ? players[1] : players[0];
+    };
+
+    return {};
+};
 
 const screenController = (function() {
+    const game = gameController();
     const startBtn = document.querySelector("#start-btn");
     const playAgainBtn = document.querySelector("#playAgainBtn");
     const resetBtn = document.querySelector("#resetBtn");
