@@ -15,6 +15,8 @@ const gameBoard = (function() {
     return {getBoard}
 })();
 
+console.log(gameBoard.getBoard())
+
 function Cell() {
     let value = 0;
 
@@ -32,17 +34,17 @@ function Cell() {
 
 const gameController = (function() {
     //const board = gameBoard();
-    const playerOneName = document.querySelector("#playerX").value;
-    const playerTwoName = document.querySelector("#playerO").value;
+    //const playerOneName = document.querySelector("#playerX").value;
+    //const playerTwoName = document.querySelector("#playerO").value;
 
     const players = [
         {
-            name: playerOneName,
+            name: "playerOneName", //Define PlayerOneName
             token: "X",
             score: 0
         },
         {
-            name: playerTwoName,
+            name: "playerTwoName", //Define PlayerTwoName
             token: "O",
             score: 0
         }

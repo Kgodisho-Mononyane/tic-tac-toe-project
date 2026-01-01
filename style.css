@@ -145,11 +145,11 @@ input:focus {
     grid-template-rows: repeat(3, 1fr);
 }
 
-.boardDiv.xDiv {
+.boardBtn.xDiv {
     background-color: var(--player-x-color);
 }
 
-.boardDiv.oDiv {
+.boardBtn.oDiv {
     background-color: var(--player-o-color);
 }
 
