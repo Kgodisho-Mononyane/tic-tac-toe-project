@@ -75,6 +75,8 @@ function gameController() {
 
 const screenController = (function() {
     const game = gameController();
+
+    const gameHeading = document.querySelector("#game-heading");
     const startBtn = document.querySelector("#start-btn");
     const playAgainBtn = document.querySelector("#playAgainBtn");
     const resetBtn = document.querySelector("#resetBtn");
