@@ -145,6 +145,15 @@ input:focus {
     grid-template-rows: repeat(3, 1fr);
 }
 
+.boardBtn {
+    background-color: var(--background-gray);
+    border: none;
+}
+
+.boardBtn:hover{
+    background-color: var(--background-blue-active)
+}
+
 .boardBtn.xDiv {
     background-color: var(--player-x-color);
 }
