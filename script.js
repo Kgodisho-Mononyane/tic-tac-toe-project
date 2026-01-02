@@ -28,7 +28,7 @@ function gameBoard() {
 };
 
 function cell() {
-    let value = 0;
+    let value = "";
 
     const addToken = (player) => {
         value = player;
@@ -42,10 +42,9 @@ function cell() {
     }
 }
 
-
 //Game Functionality
 function gameController() {
-    const board = gameBaord()
+    const board = gameBoard()
     
     //const board = gameBoard();
     const playerOneName = document.querySelector("#playerX").value;
@@ -101,6 +100,7 @@ function gameController() {
     }
 
     return {
+        playRound,
         getActivePlayer,
         playAgain,
         reset,
@@ -148,7 +148,3 @@ const screenController = (function() {
 
     updateScreen();
 })();
-
-
-
-
