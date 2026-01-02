@@ -47,8 +47,8 @@ function gameController() {
     const playerOneName = document.querySelector("#playerX").value;
     const playerTwoName = document.querySelector("#playerO").value;
     
-    const playerXName = document.querySelector("#playerXName");
-    const playerOName = document.querySelector("#playerOName");
+    // const playerXName = document.querySelector("#playerXName");
+    // const playerOName = document.querySelector("#playerOName");
 
 
     const players = [
@@ -93,6 +93,7 @@ const screenController = (function() {
         console.log("play again button clicked");
         //clear board variable
         //clear board on dom
+        //close dialog box
     })
 
     resetBtn.addEventListener("click", () => {
