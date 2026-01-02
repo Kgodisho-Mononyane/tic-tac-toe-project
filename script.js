@@ -72,7 +72,34 @@ function gameController() {
         activePlayer = activePlayer === players[0] ? players[1] : players[0];
     };
 
-    return {};
+    function playRound() {
+
+    }
+
+    function winCondition() {
+
+    }
+
+    function playAgain() {
+        alert("Play again");
+        //clear board variable
+         //clear board on dom  
+    }
+
+    function reset() {
+        alert("reset");
+        //clear player names variables
+        //clear player names on dom
+        //clear player scores variables
+        //clear player scores on dom
+        //clear board variable
+        //clear board on dom
+    }
+
+    return {
+        playAgain,
+        reset,
+    };
 };
 
 //DOM Manipulation
@@ -87,6 +114,10 @@ const screenController = (function() {
     const resultDialog = document.querySelector("#result-dialog")
     const form = document.querySelector("#form");
 
+    function displayBoard() {
+
+    }
+    
     startBtn.addEventListener("click", () => {
         console.log("start button clicked")
         dialog.showModal();
@@ -96,20 +127,13 @@ const screenController = (function() {
     playAgainBtn.addEventListener("click", () => {
          console.log("play again button clicked");
          resultDialog.close(); //close dialog box
-         //clear board variable
-         //clear board on dom  
+         game.playAgain()
     });
 
     resetBtn.addEventListener("click", () => {
         console.log("reset button clicked");
         gameHeading.textContent = "Start!";
-
-        //clear player names variables
-        //clear player names on dom
-        //clear player scores variables
-        //clear player scores on dom
-        //clear board variable
-        //clear board on dom
+        game.reset();
     });
 })();
 
