@@ -45,14 +45,15 @@ function cell() {
 
 //Game Functionality
 function gameController() {
+    const board = gameBaord()
+    
     //const board = gameBoard();
     const playerOneName = document.querySelector("#playerX").value;
     const playerTwoName = document.querySelector("#playerO").value;
-    
     // const playerXName = document.querySelector("#playerXName");
     // const playerOName = document.querySelector("#playerOName");
 
-
+    //Addition: Default player names to Player X and Player O if not included
     const players = [
         {
             name: playerOneName, //Define PlayerOneName
@@ -71,6 +72,8 @@ function gameController() {
     const switchPlayerTurn = () => {
         activePlayer = activePlayer === players[0] ? players[1] : players[0];
     };
+
+    const getActivePlayer = () => activePlayer;
 
     function playRound() {
 
@@ -97,6 +100,7 @@ function gameController() {
     }
 
     return {
+        getActivePlayer,
         playAgain,
         reset,
     };
@@ -105,6 +109,7 @@ function gameController() {
 //DOM Manipulation
 const screenController = (function() {
     const game = gameController();
+    
 
     const gameHeading = document.querySelector("#game-heading");
     const startBtn = document.querySelector("#start-btn");
@@ -114,8 +119,12 @@ const screenController = (function() {
     const resultDialog = document.querySelector("#result-dialog")
     const form = document.querySelector("#form");
 
-    function displayBoard() {
+    function updateScreen() {
+        //Clear board
+        const board = game.getBoard();
+        const activePlayer = game.getActivePlayer();
 
+        gameHeading.textContent = `${activePlayer.name}'s turn!`
     }
     
     startBtn.addEventListener("click", () => {
@@ -135,6 +144,8 @@ const screenController = (function() {
         gameHeading.textContent = "Start!";
         game.reset();
     });
+
+    updateScreen();
 })();
 
 
