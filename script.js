@@ -76,12 +76,13 @@ function gameController() {
     const getActivePlayer = () => activePlayer;
 
     function playRound() {
+        //drop player token
+        //switch to different player
 
-    }
-
-    function winCondition() {
-
-    }
+        function winCondition() {
+            
+        }
+    }        
 
     function playAgain() {
         alert("Play again");
