@@ -42,6 +42,8 @@ function cell() {
     }
 }
 
+
+//Game Functionality
 function gameController() {
     //const board = gameBoard();
     const playerOneName = document.querySelector("#playerX").value;
@@ -73,14 +75,16 @@ function gameController() {
     return {};
 };
 
+//DOM Manipulation
 const screenController = (function() {
     const game = gameController();
 
     const gameHeading = document.querySelector("#game-heading");
     const startBtn = document.querySelector("#start-btn");
-    const playAgainBtn = document.querySelector("#playAgainBtn");
+    const playAgainBtn = document.querySelector("#play-again-btn");
     const resetBtn = document.querySelector("#resetBtn");
     const dialog = document.querySelector("#dialog");
+    const resultDialog = document.querySelector("#result-dialog")
     const form = document.querySelector("#form");
 
     startBtn.addEventListener("click", () => {
@@ -91,9 +95,10 @@ const screenController = (function() {
 
     playAgainBtn.addEventListener("click", () => {
         console.log("play again button clicked");
+        resultDialog.close(); //close dialog box
         //clear board variable
         //clear board on dom
-        //close dialog box
+        
     })
 
     resetBtn.addEventListener("click", () => {
