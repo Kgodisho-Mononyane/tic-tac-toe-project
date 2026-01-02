@@ -94,22 +94,22 @@ const screenController = (function() {
     })
 
     playAgainBtn.addEventListener("click", () => {
-        console.log("play again button clicked");
-        resultDialog.close(); //close dialog box
-        //clear board variable
-        //clear board on dom
-        
-    })
+         console.log("play again button clicked");
+         resultDialog.close(); //close dialog box
+         //clear board variable
+         //clear board on dom  
+    });
 
     resetBtn.addEventListener("click", () => {
-        console.log("reset button clicked")
+        console.log("reset button clicked");
+        gameHeading.textContent = "Start!";
+
         //clear player names variables
         //clear player names on dom
         //clear player scores variables
         //clear player scores on dom
         //clear board variable
         //clear board on dom
-        //set header back to original state
     });
 })();
 
