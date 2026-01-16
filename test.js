@@ -9,15 +9,22 @@ FUNCTION gameBoard
     FOR let i = 0; i < rows; i++
         board[i] = [];
         FOR let j = 0; j < columns; j++
-
-
     ENDFOR
 
     SET getBoard to board
 
+    FUNCTION placeToken
+        place players token in specific spot
+    ENDFUNCTION
+    
+    FUNCTION clearBoard
+        reset board
+    ENDFUNCTION
+    
     RETURN
         getBoard,
-        
+        clearBoard,
+        placeToken
 ENDFUNCTION    
 
 
@@ -27,15 +34,19 @@ FUNCTION playGame
     SET activePlayer to player X
 
     SET players
-        player 1
-            name
+        player X
+            name //default to player X if not given
             token
             score
-        player 2
-            name
+        player O
+            name //default to player O if not given
             token
             score
 
+    FUNCTION playGame
+    ENDFUNCTION
+    
+    
     FUNCTION switchPlayer
         IF activePlayer is player X THEN
             switch to Player O
@@ -59,12 +70,29 @@ FUNCTION playGame
             play again
     ENDFUNCTION
     
+    FUNCTION playAgain
+        clear board
+        set activePlayer to player X
+    ENDFUNCTION
 
+    FUNCTION reset
+        clear player names
+        clear player scores
+        clear board
+    ENDFUNCTION
+    
+    RETURN
+    ENDRETURN
 ENDFUNCTION
 
 
 
 FUNCTION screenController
+    SET game to playGame
+    Set "start button"
+    set "submit" button
+    set "play again" button
+    set reset button
 ENDFUNCTION
 
 
