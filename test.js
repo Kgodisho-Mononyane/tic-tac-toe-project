@@ -1,32 +1,35 @@
-/*
-FUNCTION gameBoard
-    SET rows to 3
-    SET columns to 3
-    SET board to []
-    SET cell to ""
+const gameBoard = (function() {
+    const rows = 3;
+    const columns = 3;
+    const board = [];
+    //const cell = "";
 
+    /*
     (create a 3x3 grid for the game board)
     FOR let i = 0; i < rows; i++
         board[i] = [];
         FOR let j = 0; j < columns; j++
     ENDFOR
+*/
 
-    SET getBoard to board
+    let getBoard = board;
 
-    FUNCTION placeToken
-        place players token in specific spot
-    ENDFUNCTION
-    
-    FUNCTION clearBoard
-        reset board
-    ENDFUNCTION
-    
-    RETURN
+    function placeToken() {
+        //place players token in specific spot
+    }
+
+    function clearBoard() {
+        //reset the board Board
+    }
+
+    return {
         getBoard,
         clearBoard,
         placeToken
-ENDFUNCTION    
-*/
+    }
+})();
+
+
 
 /*
 FUNCTION playGame
