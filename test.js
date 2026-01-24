@@ -89,11 +89,33 @@ ENDFUNCTION
 
 FUNCTION screenController
     SET game to playGame
-    Set "start button"
-    set "submit" button
-    set "play again" button
-    set reset button
+    SET board to getBoard
+    SET startBtn
+    SET submitBtn
+    SET playAgainBtn
+    SET resetBtn
+
+    EVENT board
+        make board interactable on the dom
+    ENDEVENT
+    
+    EVENT startBtn
+        open dialog box
+    ENDEVENT
+    
+    EVENT submitBtn
+    ENDEVENT
+    
+    EVENT playAgainBtn
+        CALL playAgain
+    ENDEVENT
+    
+    EVENT resetBtn
+        CALL reset
+    ENDEVENT
+
 ENDFUNCTION
+
 
 
 */
