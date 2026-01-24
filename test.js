@@ -20,9 +20,14 @@ const gameBoard = (function() {
         //reset the board Board
     }
 
+    function printBoard() {
+
+    }
+
     return {
         getBoard,
         clearBoard,
+        printBoard,
         placeToken
     }
 })();
@@ -62,8 +67,8 @@ function playGame() {
 
     let activePlayer = players[0];
 
-    playRound() {
-        
+    function playRound() {
+
     }
     
     function switchPlayer() {
