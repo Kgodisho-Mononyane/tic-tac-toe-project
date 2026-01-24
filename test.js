@@ -50,7 +50,6 @@ function cell() {
 function playGame() {
     const board = gameBoard.getBoard();
     
-
     const players = [
         {
             name: "Player X",
@@ -117,8 +116,6 @@ function playGame() {
     
 }
 
-
-
 function screenController() {
     //SET game to playGame
     //SET board to getBoard
@@ -136,7 +133,8 @@ function screenController() {
     */
 
     startBtn.addEventListener("click", () => {
-        //open dialogbox
+        dialog.showModal();
+        form.reset();
     })
      
     submitBtn.addEventListener("click", () => {
