@@ -2,16 +2,14 @@ const gameBoard = (function() {
     const rows = 3;
     const columns = 3;
     const board = [];
-    //const cell = "";
 
-    /*
-    (create a 3x3 grid for the game board)
-    FOR let i = 0; i < rows; i++
+    for (let i = 0; i < rows; i++) {
         board[i] = [];
-        FOR let j = 0; j < columns; j++
-    ENDFOR
-*/
-
+        for (let j = 0; j < columns; j++) {
+            board[i].push(cell())
+        }
+    }
+    
     let getBoard = board;
 
     function placeToken() {
@@ -29,74 +27,91 @@ const gameBoard = (function() {
     }
 })();
 
+function cell() {
+    let value = "";
 
+    const addToken = (player) => {
+        value = player;
+    }
 
-/*
-FUNCTION playGame
-    SET board to getBoard
-    SET activePlayer to player X
+    const getValue = () => value;
 
-    SET players
-        player X
-            name //default to player X if not given
-            token
-            score
-        player O
-            name //default to player O if not given
-            token
-            score
+    return {
+        addToken,
+        getValue
+    }
+}
 
-    FUNCTION playGame
-    ENDFUNCTION
+function playGame() {
+    const board = gameBoard.getBoard();
     
+
+    const players = [
+        {
+            name: "Player X",
+            token: "X",
+            score: 0
+        },
+        {
+            name: "Player O",
+            token: "O",
+            score: 0
+        }
+    ]
+
+
+    let activePlayer = players[0];
+
+    playRound() {
+        
+    }
     
-    FUNCTION switchPlayer
-        IF activePlayer is player X THEN
-            switch to Player O
-        ELSE
-            switch to Player X
-        ENDIF
-    ENDFUNCTION
+    function switchPlayer() {
+        (activePlayer == players[0])?activePlayer = players[1] :activePlayer = players[0];
+    }
 
-
-    FUNCTION checkWinner
+    function checkWinner() {
+        /*
         IF there is a winner THEN
             iterate the winners score
             announce that the player won
         ELSE
             keep playing
-    ENDFUNCTION
+        */
+    }
 
-    FUNCTION checkDraw
+    function checkDraw() {
+        /*
         IF all the squares are filled && no win condition THEN
             announce draw
             play again
-    ENDFUNCTION
-    
-    FUNCTION checkGameWinner
-        IF PlayerX or PlayerO score = 3 THEN
-            CALL declarewinner
-    ENDFUNCTION
-    
-    FUNCTION declareWinner
+        */
+    }
 
-    ENDFUNCTION
-    
-    FUNCTION playAgain
-        clear board
-        set activePlayer to player X
-    ENDFUNCTION
+    function checkGameWinner(activePlayer) {
+        if (activePlayer.score = 3) {
+            declareWinner();
+        }
+    }
 
-    FUNCTION reset
-        clear player names
-        clear player scores
-        clear board
-    ENDFUNCTION
+    function declareWinner() {
+
+    }
+
+    function playAgain() {
+        gameBoard.clearBoard;
+        activePlayer = players[0]
+    }
+
+    function reset() {
+        gameBoard.clearBoard;
+        activePlayer = players[0]
+        //clear player names
+        //clear player scores
+    }
     
-    RETURN
-    ENDRETURN
-ENDFUNCTION
-*/
+}
+
 
 
 function screenController() {
